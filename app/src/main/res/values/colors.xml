@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="header_color">#0E6FFF</color>
     <color name="theme_color">#F5F5F5</color>
+    <color name="trunks">#999CA0</color>
 </resources>
