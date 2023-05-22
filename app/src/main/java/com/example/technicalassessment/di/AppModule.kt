@@ -4,6 +4,7 @@ package com.example.assignmentapp.di
 
 import com.example.assignmentapp.networkService.CommonApiService
 import com.example.assignmentapp.networkService.OkHttpClientHelper
+import com.example.technicalassessment.screens.home.util.HomeRepository
 import com.example.technicalassessment.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -28,6 +29,9 @@ object AppModule {
             .build()
             .create(CommonApiService::class.java)
     }
+    @Singleton
+    @Provides
+    fun provideRepo(apiService: CommonApiService)=HomeRepository(apiService)
 
 
 

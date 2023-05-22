@@ -35,9 +35,8 @@ class OkHttpClientHelper {
         val client: Builder = Builder()
             .addInterceptor(getHttpLoggingInterceptor())
             .addInterceptor(getRequestInterceptor())
-        if (BuildConfig.DEBUG) {
             getChuckerInterceptor()?.let { client.addInterceptor(it) }
-        }
+
         client.cache(cache)
         return client.build()
     }
@@ -128,13 +127,9 @@ class OkHttpClientHelper {
     }
 
     private fun getHeaders(request: Request): Request {
-        val versionCode = "1"
         val authToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU5MjcsImlhdCI6MTY3NDU1MDQ1MH0.dCkW0ox8tbjJA2GgUx2UEwNlbTZ7Rr38PVFJevYcXFI"
         val req = request.newBuilder()
-            .header("APP-VERSION-CODE", versionCode)
             .header("Authorization", authToken)
-            .header("Content-Type", "application/json")
-            .header("Accept", "application/json")
         return req.build()
     }
 }
