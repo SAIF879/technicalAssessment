@@ -10,4 +10,8 @@
     <color name="header_color">#0E6FFF</color>
     <color name="theme_color">#F5F5F5</color>
     <color name="trunks">#999CA0</color>
+    <color name="border_color">#808080</color>
+    <color name="transparent_color">#00ffffff</color>
+    <color name="connect_green">#8038D15F</color>
+    <color name="faq_blue">#80376FFF</color>
 </resources>
