@@ -242,7 +242,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="View Analytics"
+                    android:text="View All Links"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -256,13 +256,32 @@
                 android:id="@+id/llConnect"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@color/connect_green"
+                android:background="@drawable/green_border"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:orientation="horizontal"
                 android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
                 tools:ignore="InvalidId">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/whatsapp_icon"
+                    android:layout_weight="0.5"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:text="Talk With Us"/>
 
 
             </LinearLayout>
@@ -271,13 +290,34 @@
                 android:id="@+id/Faq"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@color/faq_blue"
+                android:background="@drawable/blue_border"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:padding="10dp"
                 app:layout_constraintTop_toBottomOf="@+id/llConnect"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/question_icon"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Frequently Asked Questions"/>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 
