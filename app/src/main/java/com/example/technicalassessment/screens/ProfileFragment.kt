@@ -1,30 +1,24 @@
-package com.example.technicalassessment
+package com.example.technicalassessment.screens
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.technicalassessment.databinding.FragmentLinksBinding
+import com.example.technicalassessment.databinding.FragmentProfileBinding
 
 
-class LinksFragment : Fragment() {
-    private val binding by lazy { FragmentLinksBinding.inflate(layoutInflater) }
+class ProfileFragment : Fragment() {
+  private val binding by lazy{FragmentProfileBinding.inflate(layoutInflater)}
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       return binding.root
+        return binding.root
     }
 
-    @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.bad.setBackgroundResource(R.drawable.card_border)
-
-
     }
-
 }

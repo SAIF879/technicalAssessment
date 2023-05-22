@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/linksFragment"
-        android:name="com.example.technicalassessment.LinksFragment"
+        android:name="com.example.technicalassessment.screens.LinksFragment"
         android:label="fragment_links"
         tools:layout="@layout/fragment_links" />
     <fragment
         android:id="@+id/courceFragment"
-        android:name="com.example.technicalassessment.CourseFragment"
+        android:name="com.example.technicalassessment.screens.CourseFragment"
         android:label="fragment_cource"
         tools:layout="@layout/fragment_course" />
     <fragment
         android:id="@+id/campaignsFragment"
-        android:name="com.example.technicalassessment.CampaignsFragment"
+        android:name="com.example.technicalassessment.screens.CampaignsFragment"
         android:label="fragment_campaigns"
         tools:layout="@layout/fragment_campaigns" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.technicalassessment.ProfileFragment"
+        android:name="com.example.technicalassessment.screens.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
