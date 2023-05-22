@@ -4,9 +4,9 @@ package com.example.assignmentapp.networkService
 
 import android.annotation.SuppressLint
 import android.util.Log
-import androidx.viewbinding.BuildConfig
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
+import com.example.technicalassessment.BuildConfig
 import com.example.technicalassessment.TechnicalAssesmentApp
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -37,7 +37,10 @@ class OkHttpClientHelper {
         val client: Builder = Builder()
             .addInterceptor(getHttpLoggingInterceptor())
             .addInterceptor(getRequestInterceptor())
+        if (BuildConfig.DEBUG){
             getChuckerInterceptor()?.let { client.addInterceptor(it) }
+
+        }
 
         client.cache(cache)
         return client.build()

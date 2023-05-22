@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.assignmentapp.networkService.ApiResult
 import com.example.assignmentapplisted.home.data.OpenInDAO
 import com.example.technicalassessment.R
@@ -16,6 +17,10 @@ import com.example.technicalassessment.databinding.FragmentLinksBinding
 import com.example.technicalassessment.screens.home.model.RvModal
 import com.example.technicalassessment.screens.home.util.HomeScreenAdapter
 import com.example.technicalassessment.screens.home.util.HomeViewModel
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.Date
+import java.util.Locale
 
 
 class LinksFragment : Fragment() {
@@ -34,27 +39,60 @@ class LinksFragment : Fragment() {
 
         binding.bad.setBackgroundResource(R.drawable.card_border)
         viewModel.getHomeData()
-        viewModel.homeData.observe(requireActivity()){
-            when(it){
-                ApiResult.Loading->{
-                    Toast.makeText(requireContext(),"loading",Toast.LENGTH_SHORT).show()
-                }
-                is ApiResult.Success->{
-                    val data=it.data as OpenInDAO
-                    val list= listOf(RvModal(R.drawable.add_icon,"Total Clicks",data.totalClicks.toString()),
-                        RvModal(R.drawable.search_icon,"Location",data.topLocation.toString())
-                        ,RvModal(R.drawable.boost_icon,"sdfdf","dedfsdfsdfsdffsf"))
-                    binding.rvData.layoutManager=LinearLayoutManager(requireContext())
-                    binding.rvData.adapter=HomeScreenAdapter(list)
-                }
-                is ApiResult.Error->{
-                    Toast.makeText(requireContext(),"error ${it.message}",Toast.LENGTH_SHORT).show()
+        binding.tvGreeting.text = localGreeting()
+        binding.rvData.layoutManager = LinearLayoutManager(requireContext()).apply {
+            orientation = LinearLayoutManager.HORIZONTAL}
+            viewModel.homeData.observe(requireActivity()) {
+                when (it) {
+                    ApiResult.Loading -> {
+//                        Toast.makeText(requireContext(), "loading", Toast.LENGTH_SHORT).show()
+                        //show progress Bar
+                    }
+
+                    is ApiResult.Success -> {
+                        val data = it.data as OpenInDAO
+                        val list = listOf(
+                            RvModal(
+                                R.drawable.add_icon,
+                                "Total Clicks",
+                                data.totalClicks.toString()
+                            ),
+                            RvModal(
+                                R.drawable.search_icon,
+                                "Location",
+                                data.topLocation.toString()
+                            ),
+                            RvModal(R.drawable.boost_icon, "Top Source", data.topSource.toString()),
+                            RvModal(R.drawable.search_icon, "Best Time", data.startTime.toString())
+                        )
+                        binding.rvData.adapter = HomeScreenAdapter(list)
+                    }
+
+                    is ApiResult.Error -> {
+                        Toast.makeText(requireContext(), "error ${it.message}", Toast.LENGTH_SHORT)
+                            .show()
+                    }
                 }
             }
+
+
+
+
+
         }
 
 
+    private fun localGreeting() : String{
+    val currentTime = Date()
+        val timeFormat = SimpleDateFormat("HH", Locale.getDefault())
+        val hour = timeFormat.format(currentTime).toInt()
 
+        return when(hour){
+            in 0..11 -> "Good Morning"
+            in 12..16 -> "Good AfterNoon"
+            in 17..20 -> "Good Evening"
+            else -> "Good Night"
+        }
     }
 
-}
+    }

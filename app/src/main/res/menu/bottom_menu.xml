@@ -3,7 +3,6 @@
 
     <item android:title="Links" android:icon="@drawable/links_icon" android:id="@+id/linksFragment" />
     <item android:title="Courses" android:icon="@drawable/courses_icon" android:id="@+id/courceFragment"/>
-    <item android:title="Item" />
     <item android:title="Campaigns" android:icon="@drawable/campaigns_icon" android:id="@+id/campaignsFragment"/>
     <item android:title="Profile" android:icon="@drawable/profile_icon" android:id="@+id/profileFragment"/>
 </menu>
