@@ -2,6 +2,7 @@ package com.example.assignmentapp.networkService
 
 
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.viewbinding.BuildConfig
 import com.chuckerteam.chucker.api.ChuckerCollector
@@ -28,6 +29,7 @@ class OkHttpClientHelper {
         const val CACHED_TIME_SECONDS = "CACHED_TIME_SECONDS"
     }
 
+    @SuppressLint("SuspiciousIndentation")
     fun getOkHttpClient(): OkHttpClient {
         val httpCacheDirectory = File(TechnicalAssesmentApp.instance?.cacheDir, "http-cache")
         val cacheSize = 10 * 1024 * 1024 // 10 MB
