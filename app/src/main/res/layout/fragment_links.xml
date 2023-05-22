@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tvHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="DashBoard"
@@ -38,16 +38,17 @@
                 app:layout_constraintTop_toTopOf="@id/parent" />
 
             <androidx.cardview.widget.CardView
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:alpha="1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/transparent_color"
+                android:alpha="0.5"
                 app:cardCornerRadius="10dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
+                    android:alpha="1"
                     android:src="@drawable/background_icon"
                     />
 
@@ -317,6 +318,16 @@
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:backgroundTint="@color/transparent_color"
+                app:layout_constraintTop_toBottomOf="@+id/Faq" />
 
 
 
