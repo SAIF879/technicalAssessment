@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/header_color"
-    tools:context=".screens.LinksFragment">
+    tools:context=".screens.home.ui.LinksFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

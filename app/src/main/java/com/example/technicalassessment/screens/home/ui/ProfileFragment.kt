@@ -1,4 +1,4 @@
-package com.example.technicalassessment.screens
+package com.example.technicalassessment.screens.home.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

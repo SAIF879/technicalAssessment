@@ -1,4 +1,4 @@
-package com.example.technicalassessment.model
+package com.example.technicalassessment.screens.home.model
 
 data class Data(
     val overall_url_chart: OverallUrlChart,

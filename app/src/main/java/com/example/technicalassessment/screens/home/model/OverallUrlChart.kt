@@ -1,4 +1,4 @@
-package com.example.technicalassessment.model
+package com.example.technicalassessment.screens.home.model
 
 data class OverallUrlChart(
     val `2023-04-21`: Int,

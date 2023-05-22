@@ -1,6 +1,6 @@
-package com.example.technicalassessment.model
+package com.example.technicalassessment.screens.home.model
 
-data class linkData(
+data class LinkData(
     val applied_campaign: Int,
     val `data`: Data,
     val extra_income: Int,

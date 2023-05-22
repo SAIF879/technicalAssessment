@@ -1,6 +1,6 @@
-package com.example.technicalassessment.model
+package com.example.technicalassessment.screens.home.model
 
-data class TopLink(
+data class RecentLink(
     val app: String,
     val created_at: String,
     val domain_id: String,
@@ -11,7 +11,7 @@ data class TopLink(
     val title: String,
     val total_clicks: Int,
     val url_id: Int,
-    val url_prefix: String,
+    val url_prefix: Any,
     val url_suffix: String,
     val web_link: String
 )
