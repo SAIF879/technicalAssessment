@@ -258,7 +258,7 @@
             <LinearLayout
                 android:id="@+id/llConnect"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:background="@drawable/green_border"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -280,12 +280,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:layout_marginStart="20dp"
                     android:layout_gravity="left"
                     android:gravity="center"
-
                     android:text="Talk With Us"/>
 
 
@@ -294,7 +292,7 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/Faq"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:background="@drawable/blue_border"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -315,7 +313,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:layout_marginStart="20dp"
                     android:layout_gravity="start"

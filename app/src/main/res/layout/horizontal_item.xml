@@ -44,7 +44,6 @@
                         android:id="@+id/ivCard"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:background=""
                         android:src="@drawable/location_icon" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.cardview.widget.CardView>
