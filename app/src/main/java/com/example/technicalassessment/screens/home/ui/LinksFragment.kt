@@ -58,7 +58,6 @@ class LinksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupGraph()
         setupViews()
         setUpObserver()
         binding.bad.setBackgroundResource(R.drawable.card_border)
