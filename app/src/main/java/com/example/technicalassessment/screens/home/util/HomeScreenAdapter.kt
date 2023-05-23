@@ -21,7 +21,6 @@ class HomeScreenAdapter(private val items : List<RvModal>)  : RecyclerView.Adapt
         holder.binding.tvDataTheme.text=item.title
         holder.binding.ivCard.setImageResource(item.img)
         val color = Color.parseColor(cardColors[position % cardColors.size])
-        holder.binding.cvImgHolder.setCardBackgroundColor(color)
     }
 
     override fun getItemCount(): Int {
