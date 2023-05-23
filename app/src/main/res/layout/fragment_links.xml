@@ -118,39 +118,40 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvData"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="@color/connect_green"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                app:layout_constraintTop_toBottomOf="@+id/graphSpace" >
+                android:background="@color/theme_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/graphSpace">
 
             </androidx.recyclerview.widget.RecyclerView>
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:padding="10dp"
+                android:layout_marginHorizontal="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rvData">
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
                     android:src="@drawable/boost_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="-20dp"
-                    android:layout_weight="1"
                     android:text="View Analytics"
+                    android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -225,6 +226,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
                 android:background="@drawable/border"
                 android:gravity="center"
                 android:padding="10dp"
@@ -235,14 +237,15 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
                     android:src="@drawable/links_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:text="View All Links"
+                    android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -270,7 +273,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/whatsapp_icon"
-                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
                     />
 
                 <TextView
@@ -278,7 +281,9 @@
                     android:layout_height="match_parent"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="left"
                     android:gravity="center"
 
                     android:text="Talk With Us"/>
@@ -304,14 +309,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/question_icon"
-                    android:layout_weight="1"/>
+                    android:layout_gravity="start"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="start"
                     android:gravity="center"
                     android:text="Frequently Asked Questions"/>
 
@@ -322,9 +329,10 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="20dp"
+                android:padding="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:backgroundTint="@color/transparent_color"
                 app:layout_constraintTop_toBottomOf="@+id/Faq" />

@@ -14,4 +14,7 @@
     <color name="transparent_color">#00ffffff</color>
     <color name="connect_green">#8038D15F</color>
     <color name="faq_blue">#80376FFF</color>
+    <color name="purple_Opacity">#1F5C33CF</color>
+    <color name="blue_opacity">#1F0E6FFF</color>
+
 </resources>

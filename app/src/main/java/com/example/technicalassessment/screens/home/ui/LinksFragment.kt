@@ -53,17 +53,17 @@ class LinksFragment : Fragment() {
                         val data = it.data as OpenInDAO
                         val list = listOf(
                             RvModal(
-                                R.drawable.add_icon,
+                                R.drawable.cursor_icon,
                                 "Total Clicks",
                                 data.totalClicks.toString()
                             ),
                             RvModal(
-                                R.drawable.search_icon,
+                                R.drawable.location_icon,
                                 "Location",
                                 data.topLocation.toString()
                             ),
-                            RvModal(R.drawable.boost_icon, "Top Source", data.topSource.toString()),
-                            RvModal(R.drawable.search_icon, "Best Time", data.startTime.toString())
+                            RvModal(R.drawable.globe_icon, "Top Source", data.topSource.toString()),
+                            RvModal(R.drawable.clock_icon, "Best Time", data.startTime.toString())
                         )
                         binding.rvData.adapter = HomeScreenAdapter(list)
                     }
